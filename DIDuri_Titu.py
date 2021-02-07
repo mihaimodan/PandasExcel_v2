@@ -35,20 +35,14 @@ for item1 in lst_did1:
     for item2 in lst_did2:
         if item1 == item2:
             lst_DIDuri_comune.append(item1)
-            
-df_did1 = pd.DataFrame(lst_did1)
-df_did1.columns = ["DID DTemp"]
 
-df_did2 = pd.DataFrame(lst_did2)
-df_did2.columns = ["DID DFull"]
+#Convertirea in 3 serii a listelor precedente pentru a le folosi drept coloane mai tarziu.        
+df_did1 = pd.Series(lst_did1)
+df_did2 = pd.Series(lst_did2)
+df_didComune = pd.Series(lst_DIDuri_comune)
 
-df_didComune = pd.DataFrame(lst_DIDuri_comune)
-df_didComune.columns = ["DID-uri Comune"]
+#Concatenarea seriilor intr-un DataFrame si atribuirea de nume coloanelor.
+df = pd.DataFrame({'DID-uri DTemp': df_did1, 'DID-uri DFull': df_did2, 'DID-uri Comune': df_didComune})
 
-# df_Final = df_did1["0"].map(str) + df_did2["0"].map(str) + df_didComune["0"].map(str)
-
-df_did1.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
-df_did2.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
-df_didComune.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
-
-sdadsa
+#Exportarea intr-un fisier excel.
+df.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
