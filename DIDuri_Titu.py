@@ -46,3 +46,5 @@ df = pd.DataFrame({'DID-uri DTemp': df_did1, 'DID-uri DFull': df_did2, 'DID-uri 
 
 #Exportarea intr-un fisier excel.
 df.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
+
+#gg wp
