@@ -37,18 +37,17 @@ for item1 in lst_did1:
             lst_DIDuri_comune.append(item1)
             
 df_did1 = pd.DataFrame(lst_did1)
-# df_did1.columns = ["DID DTemp"]
+df_did1.columns = ["DID DTemp"]
 
 df_did2 = pd.DataFrame(lst_did2)
-# df_did2.columns = ["DID DFull"]
+df_did2.columns = ["DID DFull"]
 
 df_didComune = pd.DataFrame(lst_DIDuri_comune)
-# df_didComune.columns = ["DID-uri Comune"]
+df_didComune.columns = ["DID-uri Comune"]
 
-df_Final = df_did1["0"].map(str) + df_did2["0"].map(str) + df_didComune["0"].map(str)
+# df_Final = df_did1["0"].map(str) + df_did2["0"].map(str) + df_didComune["0"].map(str)
 
-# df_did1.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx", columns = ["DID DTemp", "DID DFull"])
-# df_did2.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
-# df_didComune.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
+df_did1.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
+df_did2.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
+df_didComune.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\DIDuri_Titu - Copy.xlsx")
 
-print(df_Final)
