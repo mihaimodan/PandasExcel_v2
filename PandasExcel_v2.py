@@ -27,5 +27,3 @@ def delNan(lst = lstCommonItems):
 #Export to excel.
 df2 = pd.DataFrame(delNan(), columns = ["Common Items"])
 df2.to_excel(r"C:\Users\Mihai\Desktop\Programare\udemy\Ardit Sulce\The Python Mega Course - 10 real world applications\Exercises & other\Pandas\Output_v2.xlsx", columns = ["Common Items"])
-
-
